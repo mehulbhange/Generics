@@ -31,11 +31,25 @@ public class MaximumValue {
 
         return  max;
     }
+    /*
+     * This method used to compare three String values and get the maximum value
+     * */
+    public static String findMaxString(String val1, String val2, String val3){
+        String max = val1;
+        if (val2.compareTo(max) >= 0)
+            max = val2;
+        if (val3.compareTo(max) >= 0)
+            max = val3;
+
+        return  max;
+    }
     public static void main(String[] args) {
         System.out.println("Find Maximum Problem using Generics");
         //called findMaxInteger() 
         System.out.println("The maximum value between the three integer is : " + findMaxInteger(13, 8, 15));
 
         System.out.println("The maximum value between the three float is : " + findMaxFloat(2.5f, 4.5f, 0.5f));
+
+        System.out.println("The maximum value between the three string is : " + findMaxString("Apple", "Peach", "Banana"));
     }
 }
