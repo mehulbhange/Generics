@@ -33,18 +33,25 @@ public class MaximumValue<T extends Comparable> {
         if (val4.compareTo(max) >= 0)
             max = val4;
 
+        printMax(max);
         return  max;
+    }
+    /**
+     * Generic method to print the maximum value
+     */
+    public static <T> void printMax(T val){
+        System.out.println("Maximum value is : "+ val);
     }
     public static void main(String[] args) {
         System.out.println("Find Maximum Problem using Generics");
 
-        MaximumValue<Integer> maxInteger = new MaximumValue<>(13,8,20,15);
-        System.out.println("The maximum value between the three integer is : " + maxInteger.maximux());
+        MaximumValue<Integer> maxInteger = new MaximumValue<>(13,8,25,15);
+        maxInteger.maximux();
 
         MaximumValue<Float> maxFloat = new MaximumValue<>(2.5f, 4.5f, 10.5f, 1.5f);
-        System.out.println("The maximum value between the three float is : " + maxFloat.maximux());
+        maxFloat.maximux();
 
         MaximumValue<String> maxString = new MaximumValue<>("Apple", "Grapes", "Banana", "Lemon");
-        System.out.println("The maximum value between the three string is : " + maxString.maximux());
+        maxString.maximux();
     }
 }
